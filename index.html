@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Big-G Blessing Car Rentals - Premium Car Rental Services in Ghana</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Affordable car rental services in Ghana. Book your vehicle today - cars, SUVs, and vans available throughout Ghana." name="description">
+    <meta content="car rental Ghana, vehicle rental Accra, car hire, transportation Ghana" name="keywords">
+    
+    <!-- Favicon -->
+    <link href="img/carousel-2.jpg" rel="icon">
+    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        /* Navbar Styling */
+        .navbar {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 0.75rem 0;
+        }
+        
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .navbar-collapse {
+            flex-grow: 0 !important;
+        }
+        
+        .navbar-nav {
+            flex-direction: row !important;
+            gap: 5px;
+        }
+        
+        .navbar-brand {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff !important;
+            font-family: 'Teko', sans-serif;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .navbar-brand span {
+            background: linear-gradient(90deg, 
+                #CE1126 0%, #CE1126 20%,
+                #FCD116 20%, #FCD116 40%, 
+                #007A5E 40%, #007A5E 60%, 
+                #000000 60%, #000000 80%, 
+                #CE1126 80%, #CE1126 100%);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientFlow 3s ease-in-out infinite, navGlow 2.5s ease-in-out infinite;
+            filter: drop-shadow(0 2px 8px rgba(252, 209, 22, 0.4));
+        }
+        
+        @keyframes gradientFlow {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+        
+        @keyframes navGlow {
+            0%, 100% {
+                filter: drop-shadow(0 2px 8px rgba(252, 209, 22, 0.3)) drop-shadow(0 0 10px rgba(206, 17, 38, 0.2));
+                text-shadow: 0 0 8px rgba(0, 122, 94, 0.1);
+            }
+            50% {
+                filter: drop-shadow(0 2px 8px rgba(252, 209, 22, 0.6)) drop-shadow(0 0 15px rgba(0, 122, 94, 0.3));
+                text-shadow: 0 0 12px rgba(206, 17, 38, 0.2);
+            }
+        }
+        
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+        }
+        
+        .navbar-brand span {
+            background: linear-gradient(90deg, 
+                #CE1126 0%, #CE1126 20%,
+                #FCD116 20%, #FCD116 40%, 
+                #007A5E 40%, #007A5E 60%, 
+                #000000 60%, #000000 80%, 
+                #CE1126 80%, #CE1126 100%);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientFlow 3s ease-in-out infinite, navGlow 2.5s ease-in-out infinite;
+            filter: drop-shadow(0 2px 8px rgba(252, 209, 22, 0.4));
+        }
+        
+        @keyframes gradientFlow {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+        
+        @keyframes navGlow {
+            0%, 100% {
+                filter: drop-shadow(0 2px 8px rgba(252, 209, 22, 0.3)) drop-shadow(0 0 10px rgba(206, 17, 38, 0.2));
+                text-shadow: 0 0 8px rgba(0, 122, 94, 0.1);
+            }
+            50% {
+                filter: drop-shadow(0 2px 8px rgba(252, 209, 22, 0.6)) drop-shadow(0 0 15px rgba(0, 122, 94, 0.3));
+                text-shadow: 0 0 12px rgba(206, 17, 38, 0.2);
+            }
+        }
+        
+        .nav-link {
+            color: rgba(255,255,255,0.85) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #ffc107 !important;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.85) 0%, rgba(30, 64, 175, 0.85) 100%),
+                        url('img/R.jpeg') left center/25% no-repeat,
+                        url('img/T.jpeg') center center/50% no-repeat,
+                        url('img/B.jpeg') right center/25% no-repeat;
+            background-attachment: fixed;
+            color: white;
+            padding: 40px 0 30px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-family: 'Teko', sans-serif;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        /* Ghana Flag Animated Company Name */
+        .company-name-hero {
+            font-size: 5.5rem;
+            font-family: 'Teko', sans-serif;
+            font-weight: 900;
+            margin: 15px 0 10px 0;
+            letter-spacing: 3px;
+            line-height: 1.1;
+            background: linear-gradient(90deg, #CE1126 0%, #CE1126 25%, #FCD116 25%, #FCD116 50%, #007A5E 50%, #007A5E 75%, #000000 75%, #000000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: colorWave 4s ease-in-out infinite, textGlow 2s ease-in-out infinite, textPulse 1.5s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(206, 17, 38, 0.3), 0 0 50px rgba(0, 122, 94, 0.2);
+            filter: drop-shadow(0 0 20px rgba(252, 209, 22, 0.4));
+        }
+        
+        @keyframes colorWave {
+            0%, 100% {
+                background-position: 0% 50%;
+                background: linear-gradient(90deg, #CE1126 0%, #CE1126 25%, #FCD116 25%, #FCD116 50%, #007A5E 50%, #007A5E 75%, #000000 75%, #000000 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            25% {
+                background: linear-gradient(90deg, #FCD116 0%, #FCD116 25%, #007A5E 25%, #007A5E 50%, #000000 50%, #000000 75%, #CE1126 75%, #CE1126 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            50% {
+                background: linear-gradient(90deg, #007A5E 0%, #007A5E 25%, #000000 25%, #000000 50%, #CE1126 50%, #CE1126 75%, #FCD116 75%, #FCD116 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            75% {
+                background: linear-gradient(90deg, #000000 0%, #000000 25%, #CE1126 25%, #CE1126 50%, #FCD116 50%, #FCD116 75%, #007A5E 75%, #007A5E 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+        }
+        
+        @keyframes textGlow {
+            0%, 100% {
+                filter: drop-shadow(0 0 20px rgba(252, 209, 22, 0.4)) drop-shadow(0 0 30px rgba(206, 17, 38, 0.3));
+            }
+            50% {
+                filter: drop-shadow(0 0 40px rgba(252, 209, 22, 0.8)) drop-shadow(0 0 50px rgba(0, 122, 94, 0.5));
+            }
+        }
+        
+        @keyframes textPulse {
+            0%, 100% {
+                transform: scale(1);
+                letter-spacing: 3px;
+            }
+            50% {
+                transform: scale(1.02);
+                letter-spacing: 5px;
+            }
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .btn-primary-rental {
+            background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+            color: #1e3a8a;
+            padding: 18px 60px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 8px 25px rgba(255, 193, 7, 0.4);
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary-rental:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.4s ease;
+        }
+        
+        .btn-primary-rental:hover {
+            background: linear-gradient(135deg, #ffb300 0%, #ffa500 100%);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(255, 193, 7, 0.6);
+        }
+        
+        .btn-primary-rental:hover:before {
+            left: 100%;
+        }
+        
+        .btn-primary-rental:active {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 193, 7, 0.5);
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: white;
+            padding: 50px 0;
+            margin: 50px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            margin: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-item h3 {
+            color: #1e3a8a;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .stat-item p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        /* Featured Stat Item - Vehicles Available */
+        .stat-item-featured {
+            background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+            padding: 50px 30px;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(255, 193, 7, 0.3);
+            animation: featurePulse 2s ease-in-out infinite, slideInScale 1.2s ease-out;
+        }
+        
+        .stat-item-featured:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 20px 60px rgba(255, 193, 7, 0.5);
+            animation: featurePulse 1s ease-in-out infinite;
+        }
+        
+        .stat-item-featured:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        .stat-item-featured h3 {
+            color: #1e3a8a;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin: 15px 0 10px 0;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .stat-item-featured p {
+            color: #1e3a8a;
+            font-size: 1.3rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+            letter-spacing: 0.5px;
+        }
+        
+        .stat-item-featured i {
+            font-size: 4rem !important;
+            color: #1e3a8a !important;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+            animation: iconBounce 1.5s ease-in-out infinite;
+        }
+        
+        .stat-item-featured:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #1e3a8a, #ffc107, #1e3a8a);
+            animation: slideGradient 2s ease-in-out infinite;
+        }
+        
+        @keyframes featurePulse {
+            0%, 100% {
+                box-shadow: 0 10px 40px rgba(255, 193, 7, 0.3);
+            }
+            50% {
+                box-shadow: 0 15px 60px rgba(255, 193, 7, 0.6);
+            }
+        }
+        
+        @keyframes slideInScale {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes shimmer {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(50px, 50px);
+            }
+        }
+        
+        @keyframes iconBounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @keyframes slideGradient {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+        
+        /* Fleet Section */
+        .fleet {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-family: 'Teko', sans-serif;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        /* Car Card */
+        .car-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .car-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .car-image-wrapper {
+            position: relative;
+            width: 100%;
+        }
+        
+        .car-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: visible;
+            box-sizing: border-box;
+            perspective: 1000px;
+        }
+        
+        /* Stack/Fold Effect - all images same size */
+        .car-image img {
+            width: 90%;
+            height: 85%;
+            object-fit: contain;
+            object-position: center;
+            background: rgba(255,255,255,0.08);
+            border-radius: 8px;
+            position: absolute;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .car-image img.active {
+            opacity: 1;
+            pointer-events: auto;
+            z-index: 5;
+            transform: translateY(0) translateX(0) rotateZ(0deg);
+        }
+        
+        .car-image img.stack-1 {
+            z-index: 4;
+            opacity: 0.85;
+            transform: translateY(12px) translateX(8px) rotateZ(2deg);
+        }
+        
+        .car-image img.stack-2 {
+            z-index: 3;
+            opacity: 0.7;
+            transform: translateY(24px) translateX(16px) rotateZ(4deg);
+        }
+        
+        .car-image img.stack-3 {
+            z-index: 2;
+            opacity: 0.55;
+            transform: translateY(36px) translateX(24px) rotateZ(6deg);
+        }
+        
+        .car-image img.stack-4 {
+            z-index: 1;
+            opacity: 0.4;
+            transform: translateY(48px) translateX(32px) rotateZ(8deg);
+        }
+        
+        /* Hover effect - show layer when hovering */
+        .car-image img:hover {
+            z-index: 10;
+            transform: translateY(-20px) translateX(0) rotateZ(0deg) scale(1.05);
+            opacity: 1;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        
+        /* Navigation Arrows */
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #1e3a8a;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 20;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        
+        .nav-arrow:hover {
+            background: rgba(255, 193, 7, 0.95);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        
+        .nav-arrow:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+        
+        .nav-arrow.prev {
+            left: 15px;
+        }
+        
+        .nav-arrow.next {
+            right: 15px;
+        }
+        
+        .image-counter {
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+            background: rgba(0,0,0,0.5);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            z-index: 15;
+        }
+        
+        .car-details {
+            padding: 25px;
+        }
+        
+        .car-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+        
+        .car-specs {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+            font-size: 0.95rem;
+            color: #666;
+        }
+        
+        .car-price {
+            font-size: 1.5rem;
+            color: #ffc107;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+        
+        .car-features {
+            list-style: none;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        .car-features li {
+            padding: 5px 0;
+        }
+        
+        .car-features li:before {
+            content: "✓ ";
+            color: #ffc107;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .book-btn {
+            width: 100%;
+            padding: 12px;
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+        
+        .book-btn:hover {
+            background: #1e40af;
+            transform: translateY(-2px);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin: 50px 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-family: 'Teko', sans-serif;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #ddd;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h5 {
+            color: #ffc107;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin: 8px 0;
+        }
+        
+        .footer-section ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #ffc107;
+        }
+        
+        /* Fleet Categories */
+        .fleet-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .fleet-category-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .fleet-category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .fleet-category-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            padding: 30px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .fleet-category-header i {
+            font-size: 3rem;
+            opacity: 0.8;
+        }
+        
+        .fleet-category-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-family: 'Teko', sans-serif;
+        }
+        
+        .fleet-category-content {
+            padding: 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .fleet-category-card.active .fleet-category-content {
+            max-height: 500px;
+        }
+        
+        .fleet-category-content ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .fleet-category-content li {
+            padding: 12px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .fleet-category-content li:last-child {
+            border-bottom: none;
+        }
+        
+        .fleet-category-content li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ffc107;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+                /* Fleet Gallery */
+        .fleet-gallery-wrapper {
+            position: relative;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+        
+        .fleet-gallery {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: visible;
+            border-radius: 8px;
+        }
+        
+        .fleet-gallery img {
+            width: 90%;
+            height: 85%;
+            object-fit: contain;
+            object-position: center;
+            background: rgba(255,255,255,0.08);
+            border-radius: 8px;
+            position: absolute;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+        }
+        
+        .fleet-gallery img.active {
+            opacity: 1;
+            pointer-events: auto;
+            z-index: 5;
+        }
+        
+        .fleet-nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #1e3a8a;
+            border: none;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 20;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        
+        .fleet-nav-arrow:hover {
+            background: rgba(255, 193, 7, 0.95);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        
+        .fleet-nav-arrow:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+        
+        .fleet-nav-arrow.prev {
+            left: 15px;
+        }
+        
+        .fleet-nav-arrow.next {
+            right: 15px;
+        }
+        
+        .fleet-image-counter {
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+            background: rgba(0,0,0,0.5);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 15;
+        }
+                /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .car-image {
+                height: 200px;
+            }
+            
+            .fleet-galleries {
+                grid-template-columns: 1fr;
+            }
+            
+            .fleet-gallery {
+                height: 250px;
+            }
+            
+            .fleet-nav-arrow {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+            }
+            
+            .fleet-category-header {
+                padding: 20px 15px;
+            }
+            
+            .fleet-category-title {
+                font-size: 1.1rem;
+            }
+            
+            .fleet-category-header i {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index-rental.html">
+            <img src="img/T.jpeg" alt="Big-G Blessing Car Rentals Logo">
+            <span>Big-G Blessing Car Rentals</span>
+        </a>
+        <div class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#fleet">Our Fleet</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="booking-rental.html">Book Now</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact-rental.html">Contact</a>
+            </li>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h2 class="company-name-hero animate__animated animate__fadeInDown">Big-G Blessing Car Rentals</h2>
+        <h1 class="animate__animated animate__fadeInDown" style="margin-top: 0;">Drive With Confidence</h1>
+        <p class="animate__animated animate__fadeInUp">Premium Car Rental Services Across Ghana</p>
+        <a href="booking-rental.html" class="btn-primary-rental animate__animated animate__fadeInUp animate__delay-1s">
+            <i class="fas fa-calendar-check" style="margin-right: 10px;"></i>Book Your Car Today
+        </a>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <a href="#fleet" style="text-decoration: none; color: inherit;">
+                    <div class="stat-item stat-item-featured">
+                        <i class="fas fa-car"></i>
+                        <h3>50+</h3>
+                        <p>Vehicles Available</p>
+                        <div style="position: absolute; top: 10px; right: 10px; z-index: 2;">
+                            <span style="display: inline-block; width: 12px; height: 12px; background: #1e3a8a; border-radius: 50%; animation: blink 1s ease-in-out infinite;"></span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <style>
+                @keyframes blink {
+                    0%, 100% { opacity: 1; }
+                    50% { opacity: 0.3; }
+                }
+            </style>
+            <div class="col-md-3">
+                <div class="stat-item">
+                    <i class="fas fa-users" style="font-size: 2.5rem; color: #ffc107;"></i>
+                    <h3>1000+</h3>
+                    <p>Happy Customers</p>
+                </div>
+            </div>
+            <!-- Locations in Ghana - Hidden for now
+            <div class="col-md-3">
+                <div class="stat-item">
+                    <i class="fas fa-map-marker-alt" style="font-size: 2.5rem; color: #ffc107;"></i>
+                    <h3>10+</h3>
+                    <p>Locations in Ghana</p>
+                </div>
+            </div>
+            -->
+            <div class="col-md-3">
+                <div class="stat-item">
+                    <i class="fas fa-award" style="font-size: 2.5rem; color: #ffc107;"></i>
+                    <h3>5 Star</h3>
+                    <p>Highly Rated</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Fleet Section -->
+<section class="fleet" id="fleet">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Fleet</h2>
+            <p>Comprehensive Vehicle Categories for Every Need</p>
+        </div>
+        
+        <div class="fleet-categories">
+            <!-- Passenger Cars -->
+            <div class="fleet-category-card active" onclick="toggleFleetCategory(event)">
+                <div class="fleet-category-header">
+                    <div class="fleet-category-title">Passenger Cars</div>
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="fleet-category-content">
+                    <div class="fleet-gallery-wrapper">
+                        <div class="fleet-gallery" data-category="passenger-cars">
+                            <img src="img/A.jpeg" alt="Vehicle 1" class="active">
+                            <img src="img/B.jpeg" alt="Vehicle 2">
+                            <img src="img/C.jpeg" alt="Vehicle 3">
+                            <img src="img/D.jpeg" alt="Vehicle 4">
+                            <img src="img/E.jpeg" alt="Vehicle 5">
+                            <img src="img/F.jpeg" alt="Vehicle 6">
+                            <img src="img/G.jpeg" alt="Vehicle 7">
+                            <img src="img/H.jpeg" alt="Vehicle 8">
+                            <img src="img/I.jpeg" alt="Vehicle 9">
+                            <img src="img/J.jpeg" alt="Vehicle 10">
+                            <img src="img/K.jpeg" alt="Vehicle 11">
+                            <img src="img/L.jpeg" alt="Vehicle 12">
+                            <img src="img/M.jpeg" alt="Vehicle 13">
+                            <img src="img/N.jpeg" alt="Vehicle 14">
+                            <img src="img/O.jpeg" alt="Vehicle 15">
+                            <img src="img/P.jpeg" alt="Vehicle 16">
+                            <img src="img/Q.jpeg" alt="Vehicle 17">
+                            <img src="img/R.jpeg" alt="Vehicle 18">
+                            <img src="img/S.jpeg" alt="Vehicle 19">
+                            <img src="img/T.jpeg" alt="Vehicle 20">
+                            <img src="img/U.jpeg" alt="Vehicle 21">
+                            <button class="fleet-nav-arrow prev" onclick="fleetPrevImage(event)">&#10094;</button>
+                            <button class="fleet-nav-arrow next" onclick="fleetNextImage(event)">&#10095;</button>
+                            <div class="fleet-image-counter"><span class="current">1</span>/<span class="total">21</span></div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Salon Cars (Sedans)</li>
+                        <li>Hatchback</li>
+                        <li>SUV - Compact</li>
+                        <li>SUV - Mid/Full Size</li>
+                        <li>Crossover</li>
+                        <li>Coupe</li>
+                        <li>Convertible</li>
+                        <li>Wagon/Estate</li>
+                        <li>Pickup Truck</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Vans & People Movers -->
+            <div class="fleet-category-card" onclick="toggleFleetCategory(event)">
+                <div class="fleet-category-header">
+                    <div class="fleet-category-title">Vans & People Movers</div>
+                    <i class="fas fa-shuttle-van"></i>
+                </div>
+                <div class="fleet-category-content">
+                    <div class="fleet-gallery-wrapper">
+                        <div class="fleet-gallery" data-category="vans">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Crect fill='%23f3e5f5' width='300' height='200'/%3E%3Ctext x='50%' y='50%' font-size='16' fill='%236a1b9a' text-anchor='middle' dy='.3em'%3EMinivan - Front%3C/text%3E%3C/svg%3E" alt="Minivan" class="active">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Crect fill='%23f3e5f5' width='300' height='200'/%3E%3Ctext x='50%' y='50%' font-size='16' fill='%236a1b9a' text-anchor='middle' dy='.3em'%3EMinivan - Side%3C/text%3E%3C/svg%3E" alt="Minivan Side">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Crect fill='%23f3e5f5' width='300' height='200'/%3E%3Ctext x='50%' y='50%' font-size='16' fill='%236a1b9a' text-anchor='middle' dy='.3em'%3EMinivan - Interior%3C/text%3E%3C/svg%3E" alt="Minivan Interior">
+                            <button class="fleet-nav-arrow prev" onclick="fleetPrevImage(event)">&#10094;</button>
+                            <button class="fleet-nav-arrow next" onclick="fleetNextImage(event)">&#10095;</button>
+                            <div class="fleet-image-counter"><span class="current">1</span>/<span class="total">3</span></div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Minivan</li>
+                        <li>Passenger Van</li>
+                        <li>Minibus/Trotro</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Commercial/Other Vehicles -->
+            <div class="fleet-category-card" onclick="toggleFleetCategory(event)">
+                <div class="fleet-category-header">
+                    <div class="fleet-category-title">Commercial/Other Vehicles</div>
+                    <i class="fas fa-truck"></i>
+                </div>
+                <div class="fleet-category-content">
+                    <div class="fleet-gallery-wrapper">
+                        <div class="fleet-gallery" data-category="commercial">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Crect fill='%23e8f5e9' width='300' height='200'/%3E%3Ctext x='50%' y='50%' font-size='16' fill='%231b5e20' text-anchor='middle' dy='.3em'%3ETruck - Front%3C/text%3E%3C/svg%3E" alt="Truck" class="active">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Crect fill='%23e8f5e9' width='300' height='200'/%3E%3Ctext x='50%' y='50%' font-size='16' fill='%231b5e20' text-anchor='middle' dy='.3em'%3ETruck - Side%3C/text%3E%3C/svg%3E" alt="Truck Side">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Crect fill='%23e8f5e9' width='300' height='200'/%3E%3Ctext x='50%' y='50%' font-size='16' fill='%231b5e20' text-anchor='middle' dy='.3em'%3ETruck - Interior%3C/text%3E%3C/svg%3E" alt="Truck Interior">
+                            <button class="fleet-nav-arrow prev" onclick="fleetPrevImage(event)">&#10094;</button>
+                            <button class="fleet-nav-arrow next" onclick="fleetNextImage(event)">&#10095;</button>
+                            <div class="fleet-image-counter"><span class="current">1</span>/<span class="total">3</span></div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Cargo Van</li>
+                        <li>Truck</li>
+                        <li>Bus/Coach</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for Fleet Category Toggle -->
+<script>
+    function toggleFleetCategory(event) {
+        const card = event.currentTarget;
+        // Close other cards
+        document.querySelectorAll('.fleet-category-card').forEach(c => {
+            if (c !== card) c.classList.remove('active');
+        });
+        // Toggle current card
+        card.classList.toggle('active');
+    }
+    
+    function fleetNextImage(event) {
+        event.stopPropagation();
+        const gallery = event.currentTarget.closest('.fleet-gallery');
+        if (!gallery) return;
+        
+        const images = gallery.querySelectorAll('img');
+        const currentActive = gallery.querySelector('img.active');
+        let currentIndex = Array.from(images).indexOf(currentActive);
+        
+        // Move to next image
+        currentIndex = (currentIndex + 1) % images.length;
+        
+        images.forEach(img => img.classList.remove('active'));
+        images[currentIndex].classList.add('active');
+        
+        // Update counter
+        const counter = gallery.querySelector('.fleet-image-counter .current');
+        if (counter) counter.textContent = currentIndex + 1;
+    }
+    
+    function fleetPrevImage(event) {
+        event.stopPropagation();
+        const gallery = event.currentTarget.closest('.fleet-gallery');
+        if (!gallery) return;
+        
+        const images = gallery.querySelectorAll('img');
+        const currentActive = gallery.querySelector('img.active');
+        let currentIndex = Array.from(images).indexOf(currentActive);
+        
+        // Move to previous image
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        
+        images.forEach(img => img.classList.remove('active'));
+        images[currentIndex].classList.add('active');
+        
+        // Update counter
+        const counter = gallery.querySelector('.fleet-image-counter .current');
+        if (counter) counter.textContent = currentIndex + 1;
+    }
+</script>
+
+
+
+<!-- About Section -->
+<section class="fleet" id="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 style="font-family: 'Teko'; font-size: 2.5rem; color: #1e3a8a; margin-bottom: 20px;">Why Choose Big-G Blessing Car Rentals?</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 12px 0; font-size: 1.1rem;"><strong style="color: #ffc107;">✓</strong> Wide selection of well-maintained vehicles</li>
+                    <li style="padding: 12px 0; font-size: 1.1rem;"><strong style="color: #ffc107;">✓</strong> Competitive and transparent pricing</li>
+                    <li style="padding: 12px 0; font-size: 1.1rem;"><strong style="color: #ffc107;">✓</strong> 24/7 Customer support available</li>
+                    <li style="padding: 12px 0; font-size: 1.1rem;"><strong style="color: #ffc107;">✓</strong> Comprehensive insurance included</strong></li>
+                    <li style="padding: 12px 0; font-size: 1.1rem;"><strong style="color: #ffc107;">✓</strong> Free pickup and delivery service</strong></li>
+                    <li style="padding: 12px 0; font-size: 1.1rem;"><strong style="color: #ffc107;">✓</strong> Quick and easy online booking</strong></li>
+                </ul>
+            </div>
+            <div class="col-md-6" style="text-align: center;">
+                <div style="background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); padding: 60px; border-radius: 10px; color: white;">
+                    <i class="fas fa-medal" style="font-size: 4rem; display: block; margin-bottom: 20px;"></i>
+                    <h3 style="margin-bottom: 10px;">Trusted Since 2015</h3>
+                    <p>Over 10 years of excellence in vehicle rental services across Ghana</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Ready to Hit the Road?</h2>
+        <p style="font-size: 1.2rem; margin: 20px 0;">Book your vehicle now and enjoy a seamless rental experience</p>
+        <a href="booking-rental.html" class="btn-primary-rental">Start Your Booking</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h5>Big-G Blessing Car Rentals</h5>
+                <p>Your trusted car rental partner in Ghana</p>
+                <p style="margin-top: 15px;">
+                    <a href="#" style="color: #ffc107; text-decoration: none;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: #ffc107; text-decoration: none; margin: 0 10px;"><i class="fab fa-twitter"></i></a>
+                    <a href="#" style="color: #ffc107; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="index-rental.html">Home</a></li>
+                    <li><a href="#fleet">Our Fleet</a></li>
+                    <li><a href="booking-rental.html">Book Now</a></li>
+                    <li><a href="contact-rental.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Contact Info</h5>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +233244284353</li>
+                    <li><i class="fas fa-phone"></i> +233204248447</li>
+                    <li><i class="fas fa-envelope"></i> dejaneediwabs@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Accra, Ghana</li>
+                </ul>
+            </div>
+        </div>
+        <hr style="border-color: #444; margin: 30px 0;">
+        <p>&copy; 2024 Big-G Blessing Car Rentals. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Image Navigation Script -->
+<script>
+    function nextImage(event) {
+        const button = event.target.closest('.nav-arrow');
+        const wrapper = button.closest('.car-image-wrapper');
+        const carImage = wrapper.querySelector('.car-image');
+        const images = carImage.querySelectorAll('img');
+        
+        // Find current active image
+        const currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+        
+        // Remove active from all images and stack classes
+        images.forEach((img, index) => {
+            img.classList.remove('active', 'stack-1', 'stack-2', 'stack-3', 'stack-4');
+        });
+        
+        // Calculate next index
+        const nextIndex = (currentIndex + 1) % images.length;
+        
+        // Apply stacking effect
+        for (let i = 0; i < images.length; i++) {
+            const stackIndex = (i - nextIndex + images.length) % images.length;
+            if (stackIndex === 0) {
+                images[i].classList.add('active');
+            } else if (stackIndex <= 4) {
+                images[i].classList.add('stack-' + (stackIndex - 1));
+            }
+        }
+        
+        // Update counter
+        const counter = wrapper.querySelector('.image-counter .current');
+        counter.textContent = nextIndex + 1;
+    }
+    
+    function prevImage(event) {
+        const button = event.target.closest('.nav-arrow');
+        const wrapper = button.closest('.car-image-wrapper');
+        const carImage = wrapper.querySelector('.car-image');
+        const images = carImage.querySelectorAll('img');
+        
+        // Find current active image
+        const currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+        
+        // Remove active from all images and stack classes
+        images.forEach((img, index) => {
+            img.classList.remove('active', 'stack-1', 'stack-2', 'stack-3', 'stack-4');
+        });
+        
+        // Calculate previous index
+        const prevIndex = (currentIndex - 1 + images.length) % images.length;
+        
+        // Apply stacking effect
+        for (let i = 0; i < images.length; i++) {
+            const stackIndex = (i - prevIndex + images.length) % images.length;
+            if (stackIndex === 0) {
+                images[i].classList.add('active');
+            } else if (stackIndex <= 4) {
+                images[i].classList.add('stack-' + (stackIndex - 1));
+            }
+        }
+        
+        // Update counter
+        const counter = wrapper.querySelector('.image-counter .current');
+        counter.textContent = prevIndex + 1;
+    }
+</script>
+
+</body>
+</html>

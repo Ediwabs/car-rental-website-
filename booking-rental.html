@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Book Your Car - Big-G Blessing Car Rentals</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Book your rental car online. Easy and secure booking process." name="description">
+    
+    <!-- Favicon -->
+    <link href="img/carousel-2.jpg" rel="icon">
+    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        /* Navbar Styling */
+        .navbar {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 0.75rem 0;
+        }
+        
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .navbar-collapse {
+            flex-grow: 0 !important;
+        }
+        
+        .navbar-nav {
+            flex-direction: row !important;
+            gap: 5px;
+        }
+        
+        .navbar-brand {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff !important;
+            font-family: 'Teko', sans-serif;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+        }
+        
+        .navbar-brand span {
+            background: linear-gradient(180deg,
+                #CE1126 0%, #CE1126 25%,
+                #FCD116 25%, #FCD116 50%,
+                #007A5E 50%, #007A5E 75%,
+                #000000 75%, #000000 100%);
+            background-size: 100% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: rainbowShimmer 3.5s ease-in-out infinite, navShine 2s ease-in-out infinite;
+            filter: drop-shadow(0 2px 8px rgba(252, 209, 22, 0.5));
+        }
+        
+        @keyframes rainbowShimmer {
+            0% {
+                background-position: 0% 0%;
+            }
+            25% {
+                background-position: 0% 25%;
+            }
+            50% {
+                background-position: 0% 50%;
+            }
+            75% {
+                background-position: 0% 75%;
+            }
+            100% {
+                background-position: 0% 100%;
+            }
+        }
+        
+        @keyframes navShine {
+            0%, 100% {
+                filter: drop-shadow(0 2px 8px rgba(252, 209, 22, 0.3)) drop-shadow(0 0 6px rgba(206, 17, 38, 0.2));
+            }
+            50% {
+                filter: drop-shadow(0 2px 8px rgba(252, 209, 22, 0.7)) drop-shadow(0 0 12px rgba(0, 122, 94, 0.4));
+            }
+        }
+        
+        .nav-link {
+            color: rgba(255,255,255,0.85) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #ffc107 !important;
+        }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.75) 0%, rgba(30, 64, 175, 0.75) 100%),
+                        url('img/R.jpeg') left center/25% no-repeat,
+                        url('img/T.jpeg') center center/50% no-repeat,
+                        url('img/B.jpeg') right center/25% no-repeat;
+            background-attachment: fixed;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 320px;
+            position: relative;
+        }
+        
+        .page-header .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .page-header h1 {
+            font-family: 'Teko', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            line-height: 1.1;
+            max-width: 90%;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        /* Booking Form Section */
+        .booking-section {
+            padding: 60px 0;
+        }
+        
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #1e3a8a;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #1e3a8a;
+            box-shadow: 0 0 5px rgba(30, 58, 138, 0.2);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-row.full {
+            grid-template-columns: 1fr;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(30, 58, 138, 0.3);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            font-family: 'Teko', sans-serif;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .section-title p {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        /* Info Boxes */
+        .info-boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin: 50px 0;
+        }
+        
+        .info-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .info-box i {
+            font-size: 2.5rem;
+            color: #ffc107;
+            margin-bottom: 15px;
+        }
+        
+        .info-box h5 {
+            color: #1e3a8a;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .info-box p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .info-box.whatsapp-support {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+        
+        .info-box.whatsapp-support:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+            border-color: #25d366;
+            background: linear-gradient(135deg, rgba(37, 211, 102, 0.05) 0%, rgba(37, 211, 102, 0.02) 100%);
+        }
+        
+        .whatsapp-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .whatsapp-number {
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            margin-top: 12px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .info-box.whatsapp-support:hover .whatsapp-number {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+        }
+        
+        .online-indicator {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 12px;
+            height: 12px;
+            background: #25d366;
+            border-radius: 50%;
+            border: 2px solid white;
+            animation: pulse-online 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-online {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 6px rgba(37, 211, 102, 0.3);
+            }
+        }
+        
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: #d4edda;
+            border: 2px solid #28a745;
+            color: #155724;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #ddd;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h5 {
+            color: #ffc107;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin: 8px 0;
+        }
+        
+        .footer-section ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #ffc107;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .info-boxes {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .form-container {
+                padding: 25px;
+            }
+            
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index-rental.html">
+            <img src="img/T.jpeg" alt="Big-G Blessing Car Rentals Logo">
+            <span>Big-G Blessing Car Rentals</span>
+        </a>
+        <div class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index-rental.html#fleet">Our Fleet</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index-rental.html#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="booking-rental.html">Book Now</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact-rental.html">Contact</a>
+            </li>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Big-G Blessing Car Rentals</h1>
+        <p style="font-size: 1.2rem; opacity: 0.95; margin-top: 15px;">Quick, Easy & Secure Booking</p>
+    </div>
+</section>
+
+<!-- Booking Form Section -->
+<section class="booking-section">
+    <div class="container">
+        <!-- Info Boxes -->
+        <div class="info-boxes">
+            <div class="info-box">
+                <i class="fas fa-clipboard-check"></i>
+                <h5>Easy Process</h5>
+                <p>Fill out the form and we'll contact you within 1 hour</p>
+            </div>
+            <div class="info-box">
+                <i class="fas fa-lock"></i>
+                <h5>Secure Payment</h5>
+                <p>Your information is safe with us</p>
+            </div>
+            <a href="https://wa.me/233204248447" target="_blank" rel="noopener noreferrer" class="whatsapp-link">
+                <div class="info-box whatsapp-support">
+                    <div class="online-indicator"></div>
+                    <i class="fab fa-whatsapp"></i>
+                    <h5>24/7 Support</h5>
+                    <p>Chat with us on WhatsApp</p>
+                    <div class="whatsapp-number">+233 204 248 447</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Form Container -->
+        <div class="form-container">
+            <div class="section-title">
+                <h2>Reserve Your Vehicle</h2>
+                <p>Fill in the details below and we'll get back to you shortly</p>
+            </div>
+            
+            <div class="success-message" id="successMessage">
+                <strong><i class="fas fa-check-circle"></i> Success!</strong>
+                <p>Your booking request has been sent! We'll contact you soon to confirm your reservation.</p>
+            </div>
+
+            <!-- IMPORTANT: Replace your-email@gmail.com with your actual email address -->
+            <form id="bookingForm" action="https://formsubmit.co/dejaneediwabs@gmail.com" method="POST" onsubmit="handleSubmit(event)">
+                
+                <!-- Client Information -->
+                <div class="form-row full" style="margin-bottom: 30px;">
+                    <h5 style="color: #1e3a8a; font-weight: 700; margin-bottom: 20px;">
+                        <i class="fas fa-user"></i> Your Information
+                    </h5>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="Email" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="Phone Number" pattern="[0-9]{10}" placeholder="0XXXXXXXXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="whatsapp">WhatsApp Number</label>
+                        <input type="tel" id="whatsapp" name="WhatsApp Number" placeholder="Optional">
+                    </div>
+                </div>
+
+                <!-- Booking Details -->
+                <div class="form-row full" style="margin: 30px 0 20px 0;">
+                    <h5 style="color: #1e3a8a; font-weight: 700; margin-bottom: 20px;">
+                        <i class="fas fa-car"></i> Booking Details
+                    </h5>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="carType">Vehicle Type *</label>
+                        <select id="carType" name="Vehicle Type" required>
+                            <option value="">-- Select a Vehicle --</option>
+                            <option value="Toyota Corolla - GH₵ 250/day">Toyota Corolla - GH₵ 250/day</option>
+                            <option value="Hyundai i10 - GH₵ 180/day">Hyundai i10 - GH₵ 180/day</option>
+                            <option value="Ford Ranger Pickup - GH₵ 350/day">Ford Ranger Pickup - GH₵ 350/day</option>
+                            <option value="Toyota Highlander SUV - GH₵ 450/day">Toyota Highlander SUV - GH₵ 450/day</option>
+                            <option value="Hyundai H350 Van - GH₵ 600/day">Hyundai H350 Van - GH₵ 600/day</option>
+                            <option value="Mercedes-Benz C-Class - GH₵ 800/day">Mercedes-Benz C-Class - GH₵ 800/day</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="rentalDays">Rental Duration (Days) *</label>
+                        <input type="number" id="rentalDays" name="Rental Days" min="1" max="365" placeholder="Number of days" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pickupDate">Pickup Date *</label>
+                        <input type="date" id="pickupDate" name="Pickup Date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="returnDate">Return Date *</label>
+                        <input type="date" id="returnDate" name="Return Date" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pickupLocation">Pickup Location *</label>
+                        <select id="pickupLocation" name="Pickup Location" required>
+                            <option value="">-- Select Location --</option>
+                            <option value="Accra - Osu Branch">Accra - Osu Branch</option>
+                            <option value="Accra - Airport Branch">Accra - Airport Branch</option>
+                            <option value="Kumasi - Main Branch">Kumasi - Main Branch</option>
+                            <option value="Takoradi - Branch">Takoradi - Branch</option>
+                            <option value="Sekondi - Branch">Sekondi - Branch</option>
+                            <option value="Hotel/Custom Pickup">Hotel/Custom Pickup</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dropoffLocation">Drop-off Location *</label>
+                        <select id="dropoffLocation" name="Drop-off Location" required>
+                            <option value="">-- Select Location --</option>
+                            <option value="Accra - Osu Branch">Accra - Osu Branch</option>
+                            <option value="Accra - Airport Branch">Accra - Airport Branch</option>
+                            <option value="Kumasi - Main Branch">Kumasi - Main Branch</option>
+                            <option value="Takoradi - Branch">Takoradi - Branch</option>
+                            <option value="Sekondi - Branch">Sekondi - Branch</option>
+                            <option value="Hotel/Custom Drop-off">Hotel/Custom Drop-off</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Special Requirements -->
+                <div class="form-row full" style="margin: 30px 0 20px 0;">
+                    <h5 style="color: #1e3a8a; font-weight: 700; margin-bottom: 20px;">
+                        <i class="fas fa-cog"></i> Additional Information
+                    </h5>
+                </div>
+
+                <div class="form-group">
+                    <label for="additionalServices">Additional Services</label>
+                    <select id="additionalServices" name="Additional Services">
+                        <option value="None">No Additional Services</option>
+                        <option value="GPS Navigation Device - GH₵ 20/day">GPS Navigation Device - GH₵ 20/day</option>
+                        <option value="Child Car Seat - GH₵ 15/day">Child Car Seat - GH₵ 15/day</option>
+                        <option value="Driver Service - GH₵ 150/day">Driver Service - GH₵ 150/day</option>
+                        <option value="Wireless Charger - GH₵ 10/day">Wireless Charger - GH₵ 10/day</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="specialRequests">Special Requests & Notes</label>
+                    <textarea id="specialRequests" name="Special Requests" placeholder="Please let us know any special requirements or preferences..."></textarea>
+                </div>
+
+                <div class="form-group" style="margin-top: 25px; padding: 15px; background: #f0f0f0; border-radius: 5px;">
+                    <label style="display: flex; align-items: center; cursor: pointer; font-weight: 400;">
+                        <input type="checkbox" id="terms" name="Terms Accepted" required style="width: auto; margin-right: 10px;">
+                        <span>I agree to the terms and conditions. I understand that Big-G Blessing Car Rentals will contact me to confirm this booking.</span>
+                    </label>
+                </div>
+
+                <!-- Hidden field for redirect -->
+                <input type="hidden" name="_next" value="thank-you-rental.html">
+                
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Submit Booking Request
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h5>Big-G Blessing Car Rentals</h5>
+                <p>Your trusted car rental partner in Ghana</p>
+            </div>
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="index-rental.html">Home</a></li>
+                    <li><a href="index-rental.html#fleet">Our Fleet</a></li>
+                    <li><a href="booking-rental.html">Book Now</a></li>
+                    <li><a href="contact-rental.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Contact Info</h5>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +233 (0) 204248447</li>
+                    <li><i class="fas fa-envelope"></i> dejaneediwabs@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <hr style="border-color: #444; margin: 30px 0;">
+        <p>&copy; 2024 Big-G Blessing Car Rentals. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    function handleSubmit(event) {
+        // The form will submit to FormSubmit which will email you
+        // You can add additional validation here if needed
+        console.log("Form submitted");
+    }
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
