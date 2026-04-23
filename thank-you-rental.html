@@ -33,30 +33,225 @@
             background-color: #f8f9fa;
         }
         
-        /* Navbar Styling */
+        /* Navbar */
         .navbar {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 1rem 0;
+            padding: 0;
+        }
+        
+        .navbar.site-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background: #0f172a;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.35);
+        }
+        
+        .site-header > .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            gap: 0.75rem;
+        }
+        
+        .site-header .navbar-toggler {
+            margin-left: auto;
+            flex-shrink: 0;
+        }
+        
+        @media (min-width: 768px) {
+            .site-header > .container {
+                flex-wrap: nowrap;
+                gap: 1rem;
+            }
+            
+            .site-header .navbar-toggler {
+                margin-left: 0;
+            }
+            
+            .site-header .navbar-brand {
+                flex-shrink: 0;
+            }
+            
+            .site-header .navbar-collapse {
+                display: flex !important;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: flex-end;
+                flex: 1 1 auto;
+                min-width: 0;
+            }
+            
+            .site-header .navbar-nav.site-nav-actions {
+                flex-direction: row !important;
+                flex-wrap: wrap;
+                align-items: center !important;
+                justify-content: flex-end;
+                align-content: center;
+                width: auto;
+                margin-top: 0 !important;
+            }
         }
         
         .navbar-brand {
-            font-size: 28px;
+            font-size: clamp(1.15rem, 2.5vw, 1.75rem);
             font-weight: 700;
             color: #fff !important;
             font-family: 'Teko', sans-serif;
             letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-right: auto;
+            text-decoration: none;
         }
         
-        .nav-link {
-            color: rgba(255,255,255,0.85) !important;
-            font-weight: 500;
-            margin: 0 10px;
-            transition: color 0.3s ease;
+        .navbar-brand:hover,
+        .navbar-brand:focus {
+            text-decoration: none;
         }
         
-        .nav-link:hover {
-            color: #ffc107 !important;
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        
+        .navbar-brand .brand-text {
+            background: linear-gradient(90deg, #CE1126 0%, #FCD116 35%, #007A5E 65%, #1e293b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .site-header .navbar-nav.site-nav-actions {
+            list-style: none;
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            row-gap: 0.5rem;
+        }
+        
+        .site-header .navbar-nav.site-nav-actions .nav-item {
+            list-style: none;
+            list-style-type: none;
+            display: block;
+        }
+        
+        @media (min-width: 768px) {
+            .site-header .navbar-nav.site-nav-actions .nav-item {
+                display: flex;
+                align-items: center;
+            }
+        }
+        
+        .site-header .navbar-nav.site-nav-actions .nav-item::marker {
+            content: none;
+        }
+        
+        .site-header .nav-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: rgba(255, 255, 255, 0.92) !important;
+            padding: 0.55rem 1.05rem !important;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            background: rgba(255, 255, 255, 0.06);
+            text-decoration: none !important;
+            transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease,
+                box-shadow 0.2s ease, transform 0.2s ease;
+            min-height: 42px;
+        }
+        
+        .site-header .nav-btn:hover,
+        .site-header .nav-btn:focus {
+            color: #0f172a !important;
+            background: #fbbf24;
+            border-color: #fbbf24;
+            box-shadow: 0 6px 18px rgba(251, 191, 36, 0.38);
+            transform: translateY(-2px);
+        }
+        
+        .site-header .nav-btn:active {
+            transform: translateY(0);
+        }
+        
+        .fab-book {
+            position: fixed;
+            right: 1.35rem;
+            bottom: max(1.35rem, env(safe-area-inset-bottom, 0px));
+            z-index: 1080;
+            height: 60px;
+            min-width: 60px;
+            width: 60px;
+            border-radius: 999px;
+            display: inline-flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            padding: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            background: linear-gradient(145deg, #fde68a 0%, #fbbf24 45%, #f59e0b 100%);
+            color: #0f172a;
+            font-size: 1.35rem;
+            box-shadow: 0 8px 28px rgba(245, 158, 11, 0.5), 0 2px 10px rgba(15, 23, 42, 0.25);
+            border: 2px solid rgba(255, 255, 255, 0.45);
+            text-decoration: none;
+            transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                min-width 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                padding 0.3s ease,
+                gap 0.3s ease,
+                box-shadow 0.22s ease,
+                filter 0.22s ease,
+                transform 0.22s ease;
+        }
+        
+        .fab-book-text {
+            display: inline-block;
+            max-width: 0;
+            opacity: 0;
+            overflow: hidden;
+            font-weight: 800;
+            font-size: 0.95rem;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            transition: max-width 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.22s ease;
+        }
+        
+        .fab-book:hover,
+        .fab-book:focus-visible {
+            color: #0f172a;
+            text-decoration: none;
+            width: 188px;
+            min-width: 188px;
+            padding: 0 1.1rem 0 0.85rem;
+            gap: 0.5rem;
+            justify-content: flex-start;
+            box-shadow: 0 12px 36px rgba(245, 158, 11, 0.58), 0 4px 14px rgba(15, 23, 42, 0.22);
+            filter: brightness(1.03);
+            transform: translateY(-2px);
+        }
+        
+        .fab-book:hover .fab-book-text,
+        .fab-book:focus-visible .fab-book-text {
+            max-width: 120px;
+            opacity: 1;
+        }
+        
+        .fab-book:active {
+            transform: translateY(0);
         }
         
         /* Thank You Section */
@@ -79,18 +274,8 @@
         
         .thank-you-icon {
             font-size: 5rem;
-            color: #28a745;
+            color: #16a34a;
             margin-bottom: 20px;
-            animation: bounce 2s infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
         }
         
         .thank-you-title {
@@ -215,90 +400,6 @@
             color: #ffc107;
         }
 
-        /* Navbar Accordion Styles */
-        .navbar .accordion-button {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%) !important;
-            color: rgba(255,255,255,0.9) !important;
-            border: none !important;
-            font-weight: 500;
-            padding: 12px 20px !important;
-            transition: all 0.3s ease;
-        }
-        .navbar .accordion-button:not(.collapsed) {
-            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%) !important;
-            color: #ffc107 !important;
-            box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1);
-        }
-        .navbar .accordion-button:focus {
-            box-shadow: none !important;
-            border-color: rgba(255,255,255,0.15) !important;
-        }
-        .navbar .accordion-button::after {
-            filter: brightness(1.2) !important;
-        }
-        .navbar .accordion-collapse .nav-link {
-            padding-left: 30px !important;
-            color: rgba(255,255,255,0.8) !important;
-            border-left: 3px solid transparent;
-            transition: all 0.3s ease;
-        }
-        .navbar .accordion-collapse .nav-link:hover {
-            color: #ffc107 !important;
-            border-left-color: #ffc107;
-            background: rgba(255,193,7,0.1) !important;
-        }
-        .navbar .accordion-body {
-            padding: 0 !important;
-            background: rgba(30,58,138,0.8);
-        }
-        .navbar .dropdown-toggle:hover::after {
-            border-top-color: #ffc107;
-        }
-        .navbar .dropdown-menu {
-            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-            border: none;
-            border-radius: 8px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-            padding: 8px 0;
-            animation: dropdownSlide 0.3s ease-out;
-            margin-top: 5px;
-        }
-        @keyframes dropdownSlide {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .navbar .dropdown-item {
-            color: rgba(255,255,255,0.9) !important;
-            font-weight: 500;
-            padding: 12px 20px !important;
-            margin: 0 5px;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-        .navbar .dropdown-item:hover {
-            background: rgba(255,193,7,0.2) !important;
-            color: #ffc107 !important;
-            transform: translateX(5px);
-        }
-        .navbar .dropdown-item.active {
-            background: rgba(255,193,7,0.3) !important;
-            color: #ffc107 !important;
-        }
-        @media (max-width: 991px) {
-            .navbar .dropdown-menu {
-                background: rgba(30,58,138,0.95);
-                border-radius: 0;
-                box-shadow: none;
-                margin-top: 0;
-            }
-        }
-        
         /* Responsive */
         @media (max-width: 768px) {
             .thank-you-section {
@@ -335,40 +436,23 @@
 <body>
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark">
+<nav class="navbar navbar-expand-md navbar-dark site-header">
+    <div class="container py-2">
         <a class="navbar-brand" href="index.html">
-            <i class="fas fa-car"></i> Big-G Blessing Car Rentals
+            <img src="img/T.jpeg" width="40" height="40" alt="Big-G Blessing Car Rentals logo">
+            <span class="brand-text">Big-G Blessing Car Rentals</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <div class="accordion" id="navbarAccordion">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarServices" aria-expanded="false">
-                                    Services
-                                </button>
-                            </h2>
-                            <div id="navbarServices" class="accordion-collapse collapse" data-bs-parent="#navbarAccordion">
-                                <div class="accordion-body">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><a class="nav-link p-2" href="booking-rental.html">Booking</a></li>
-                                        <li><a class="nav-link p-2" href="contact-rental.html">Contact</a></li>
-                                        <li><a class="nav-link p-2" href="index.html#fleet">Fleet</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+        <div class="collapse navbar-collapse justify-content-md-end" id="navbarNav">
+            <ul class="navbar-nav site-nav-actions mt-3 mt-md-0 ms-md-auto flex-column flex-md-row flex-md-wrap align-items-stretch align-items-md-center gap-2 w-100 w-md-auto">
+                <li class="nav-item"><a class="nav-link nav-btn" href="index.html"><i class="fas fa-home" aria-hidden="true"></i> Home</a></li>
+                <li class="nav-item"><a class="nav-link nav-btn" href="index.html#fleet"><i class="fas fa-car-side" aria-hidden="true"></i> Fleet</a></li>
+                <li class="nav-item"><a class="nav-link nav-btn" href="index.html#about"><i class="fas fa-circle-info" aria-hidden="true"></i> About</a></li>
+                <li class="nav-item"><a class="nav-link nav-btn" href="booking-rental.html"><i class="fas fa-calendar-check" aria-hidden="true"></i> Booking</a></li>
+                <li class="nav-item"><a class="nav-link nav-btn" href="contact-rental.html"><i class="fas fa-envelope" aria-hidden="true"></i> Contact</a></li>
             </ul>
-
         </div>
     </div>
 </nav>
@@ -407,10 +491,10 @@
             </div>
             
             <div class="button-group">
-                <a href="index-rental.html" class="btn-secondary-rental">
+                <a href="index.html" class="btn-secondary-rental">
                     <i class="fas fa-home"></i> Back to Home
                 </a>
-                <a href="index-rental.html#fleet" class="btn-primary-rental">
+                <a href="index.html#fleet" class="btn-primary-rental">
                     <i class="fas fa-car"></i> View More Cars
                 </a>
             </div>
@@ -429,8 +513,8 @@
             <div class="footer-section">
                 <h5>Quick Links</h5>
                 <ul>
-                    <li><a href="index-rental.html">Home</a></li>
-                    <li><a href="index-rental.html#fleet">Our Fleet</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#fleet">Our Fleet</a></li>
                     <li><a href="booking-rental.html">Book Now</a></li>
                     <li><a href="contact-rental.html">Contact</a></li>
                 </ul>
@@ -450,6 +534,11 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<a href="booking-rental.html#bookingForm" class="fab-book" title="Book Now" aria-label="Book Now — open booking form">
+    <i class="fas fa-calendar-check" aria-hidden="true"></i>
+    <span class="fab-book-text">Book Now</span>
+</a>
 
 </body>
 </html>
